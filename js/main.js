@@ -1,4 +1,4 @@
-//============================================== ver.0.0  =========================================
+//============================================== ver. 1.0  =========================================
 var apiKey = "3aa29487f83e54bcc224d7ad20d3fc8e";
 
 function getWeather() {
@@ -15,16 +15,30 @@ function getWeather() {
 
         output.innerHTML = '<p>Have a Nice Day :)</p>';
 
-        $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&APPID=" + apiKey, function (data) {
-            console.log(data);
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=metric&APPID=" + apiKey, function (data) {
+            // console.log(data);
+            // var temp = data.main.temp;
+            var scale = "C";
 
-            // var text = encodeURIComponent(data.quoteText);
-            // $('#my-location').text(data.coord.lat + " --- " + data.coord.lon);
+            $('#my-temp').text(data.main.temp + " °" + scale);
 
-            $('#my-temp').text(data.main.temp);
+            $('#my-button').on("click", function(){
+                    // The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
+                if (scale == "C") {
+                    var temp = (data.main.temp * 1.8) + 32;
+                    scale = "F";
+                    return $('#my-temp').text(temp + " °" + scale);
+                } else {
+                    // temp = (temp - 32) / 1.8;
+                    scale = "C";
+                    return $('#my-temp').text(data.main.temp + " °" + scale);
+                }
+            });
+
             $('#my-icon').attr('src', "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
             $('#city').text(data.name);
 
+            // onclick przelicz temp na inne stopnie
         });
 
 
@@ -41,6 +55,7 @@ function getWeather() {
 
     navigator.geolocation.getCurrentPosition(success, error);
 }
+
 
 $(document).ready(function () {
     getWeather();
