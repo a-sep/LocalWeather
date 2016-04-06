@@ -13,32 +13,28 @@ function getWeather() {
         var lat = position.coords.latitude;
         var lon = position.coords.longitude;
 
-        output.innerHTML = '<p>Have a Nice Day :)</p>';
+        output.innerHTML = '<br/><p>Have a Nice Day :)</p>';
 
         $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=metric&APPID=" + apiKey, function (data) {
-            // console.log(data);
-            // var temp = data.main.temp;
+            console.log(data);
             var scale = "C";
 
             $('#my-temp').text(data.main.temp + " °" + scale);
-
             $('#my-button').on("click", function(){
-                    // The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 9/5, plus 32.
+                    // The algorithm to convert from Celsius to Fahrenheit is the temperature in Celsius times 1.8, plus 32.
                 if (scale == "C") {
                     var temp = (data.main.temp * 1.8) + 32;
                     scale = "F";
                     return $('#my-temp').text(temp + " °" + scale);
                 } else {
-                    // temp = (temp - 32) / 1.8;
                     scale = "C";
                     return $('#my-temp').text(data.main.temp + " °" + scale);
                 }
             });
 
             $('#my-icon').attr('src', "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png");
-            $('#city').text(data.name);
-
-            // onclick przelicz temp na inne stopnie
+            $('#my-city').text(data.name);
+            $('#my-description').text( data.weather[0].description);
         });
 
 
