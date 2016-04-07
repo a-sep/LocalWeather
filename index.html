@@ -12,6 +12,8 @@
     <link href="css/main.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/weather-icons.min.css" rel="stylesheet">
+    <link href="css/weather-icons-wind.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,18 +32,25 @@
 
     <div class="container text-center">
         <h1 id="my-city"></h1>
-        <img id="my-icon" src="" alt="Weather icon"/>
+        <p><i id="my-weather-icon" class="wi"></i></p>
+        <p id="my-weather-description"></p>
         <h1 id="my-temp"></h1>
-        <h3>°F&nbsp;
-            <button id="my-button" class="btn btn-info">
-                <i id="my-toggle" class="fa fa-2x fa-toggle-on"></i>
+
+        <br/>
+        <p><i id="my-wind-icon" class="wi wi-wind"></i></p>
+        <p id="my-wind-description"></p>
+
+        <br/>
+        <div class="btn-group" role="group" aria-label="...">
+            <button id="refresh" class="btn btn-success" role="button">
+                <i class="fa fa-2x fa-refresh"></i>
             </button>
-            &nbsp;°C
-        </h3>
-        <br/>
-        <h4 id="my-description"></h4>
-        <br/>
-        <button id="refresh" class="btn btn-success" role="button">Refresh</button>
+
+            <button id="my-button" class="btn btn-info">
+                °F&nbsp; <i id="my-toggle" class="fa fa-2x fa-toggle-on"></i> &nbsp;°C
+            </button>
+
+        </div>
     </div>
 
     <div class="container text-center">
