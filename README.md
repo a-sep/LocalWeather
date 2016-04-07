@@ -1,12 +1,6 @@
 # Local Weather
 
-ver. 1.0
-
-//============================
-
-App in tests phase...
-
-//============================
+ver. 2.0
 
 
 Project for freeCodeCamp.

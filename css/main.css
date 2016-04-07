@@ -1,18 +1,46 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400);
-@import url(https://fonts.googleapis.com/css?family=Lora:400);
 
 body {
-    background: url("");
+    background: url("https://images.unsplash.com/photo-1421091242698-34f6ad7fc088?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=36d7f4a57b95c194adaecac96d4fc395");
+    color: #F8C278;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     height: 925px;
     margin: 0px;
-    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.3);
     font-family: 'Lato', sans-serif;
     overflow: hidden;
 }
 
-blockquote {
-    background-color: rgba(255, 255, 255, 0.5);
+#my-weather {
+    background-color: rgba(72, 52, 92, 0.6);
+    height: 925px;
 }
 
+#my-icon {
+    width: 8%;
+    height: auto;
+}
+
+#my-status, header {
+    color: #F1A468;
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: #C97A5B;
+    text-decoration: none;
+}
+
+/* ========================== paleta kolorów ==============================*/
+#test {
+    color: #F8C278;
+    color: #F1A468;
+    color: #C97A5B;
+    color: #915161;
+    color: #48345C;
+}

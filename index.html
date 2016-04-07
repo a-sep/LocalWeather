@@ -21,33 +21,47 @@
     <![endif]-->
 </head>
 <body>
-<div class="container text-center">
-    <h1>Your Local Weather</h1>
 
-    <p id="my-location"></p>
-    <p id="my-city"></p>
-    <p id="my-temp"></p>
-    <button id="my-button">C / F</button>
-    <br/>
-    <img id="my-icon" src="" alt="Weather icon"/>
-    <p id="my-description"></p>
-    <br/>
-    <p id="out"></p>
+<div class="container-fluid text-center" id="my-weather">
 
+    <header class="container-fluid text-center">
+        <h3>Your Local Weather</h3>
+    </header>
 
-</div>
-
-<footer class="footer">
-    <div class="container-fluid text-center ">
-        <p class="text-muted">Inspired by artur<strong>sęp</strong>
-            <script>document.write(new Date().getFullYear());</script>
-        </p>
+    <div class="container text-center">
+        <h1 id="my-city"></h1>
+        <img id="my-icon" src="" alt="Weather icon"/>
+        <h1 id="my-temp"></h1>
+        <h3>°F&nbsp;
+            <button id="my-button" class="btn btn-info">
+                <i id="my-toggle" class="fa fa-2x fa-toggle-on"></i>
+            </button>
+            &nbsp;°C
+        </h3>
+        <br/>
+        <h4 id="my-description"></h4>
+        <br/>
+        <button id="refresh" class="btn btn-success" role="button">Refresh</button>
     </div>
-</footer>
+
+    <div class="container text-center">
+        <br/>
+        <p id="my-status"></p>
+    </div>
+
+    <footer class="footer text-center">
+        <p class="text-muted">
+            Inspired by
+            <a href="http://codepen.io/artur_sep/full/LNRxVP/" target="_blank">
+                artur<strong>sęp</strong>
+                <script>document.write(new Date().getFullYear());</script>
+            </a>
+        </p>
+    </footer>
+</div>
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/main.js"></script>
