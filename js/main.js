@@ -20,14 +20,15 @@ function getWeather() {
         $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&units=metric&APPID=" + apiKey, function (data) {
             $("#my-toggle").removeClass('fa-toggle-off');
             $("#my-toggle").addClass('fa-toggle-on');
+            $("#my-weather-icon").removeClass('wi-day-sunny');
             console.log(data);
             var scale = "C";
             var tempF = (data.main.temp * 1.8 + 32).toFixed(1);
             var tempC = data.main.temp.toFixed(1);
 
             $('#my-city').text(data.name);
-            $("#my-weather-icon").addClass('wi-owm-'+ data.weather[0].id);
-            $('#my-weather-description').text(" "+ data.weather[0].description);
+            $("#my-weather-icon").addClass('wi-owm-' + data.weather[0].id);
+            $('#my-weather-description').text(" " + data.weather[0].description);
             $('#my-temp').text(tempC + " °" + scale);
 
             $('#my-button').on("click", function () {
@@ -45,7 +46,7 @@ function getWeather() {
                 }
             });
             console.log(data.wind.deg);
-            $("#my-wind-icon").addClass("from-"+ data.wind.deg +"-deg");
+            $("#my-wind-icon").addClass("from-" + data.wind.deg + "-deg");
             $("#my-wind-description").text("wind " + data.wind.speed + " m/s");
         });
 
