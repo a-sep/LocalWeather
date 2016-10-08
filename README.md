@@ -1,7 +1,7 @@
 # Local Weather
-
 ver. 3.0
 
+link http://a-sep.github.io/LocalWeather/
 
 Project for freeCodeCamp.
 Feel free to send some feedback about weather app.
