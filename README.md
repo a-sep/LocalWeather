@@ -1,11 +1,11 @@
-# Local Weather
-ver. 3.0
+# Local Weather ver. 3.5
 
-link http://a-sep.github.io/LocalWeather/
+Project for FreeCodeCamp <https://www.freecodecamp.com/challenges/show-the-local-weather>
 
-Project for freeCodeCamp.
-Feel free to send some feedback about weather app.
+## github <http://a-sep.github.io/LocalWeather/>
+
+## codepen.io <http://codepen.io/artur_sep/full/MyOPzX/>
 
 //===============================
 
-Weather Icons is maintained by Erik Flowers. Reach him at @Erik_UX or at http://www.helloerik.com.
+Weather Icons is maintained by Erik Flowers. Reach him at @Erik_UX or at <http://www.helloerik.com>.

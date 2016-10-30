@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400);
-
 body {
     background: url("https://images.unsplash.com/photo-1421091242698-34f6ad7fc088?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=36d7f4a57b95c194adaecac96d4fc395");
     color: #F8C278;
@@ -11,21 +10,47 @@ body {
     text-shadow: 1.5px 1.5px 0 rgba(0, 0, 0, 0.3);
     font-family: 'Lato', sans-serif;
     overflow: hidden;
+    /*the cursor doesn't change and the numbers on buttons won't get highlighted*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: default;
 }
 
 #my-weather {
-    background-color: rgba(72, 52, 92, 0.6);
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     height: 925px;
 }
-#my-weather-icon{
-    font-size: 5em;
+
+#my-weather-icon {
+    font-size: 4em;
 }
-#my-wind-icon{
-    font-size: 5em;
+
+#my-wind-icon {
+    font-size: 4em;
 }
 
 #my-status, header {
     color: #F1A468;
+}
+
+#my-button {
+    font-size: 3em;
+    color: #F1A468;
+}
+
+#refresh {
+    color: #F1A468;
+}
+
+#refresh:active, #my-toggle:active {
+    color: green;
 }
 
 footer a {
@@ -37,7 +62,9 @@ footer a:hover {
     text-decoration: none;
 }
 
+
 /* ========================== paleta kolorów ==============================*/
+
 #test {
     color: #F8C278;
     color: #F1A468;

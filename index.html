@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,59 +23,56 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
 
-<div class="container-fluid text-center" id="my-weather">
+    <div class="container text-center" id="my-weather">
 
-    <header class="container-fluid text-center">
-        <h3>Your Local Weather</h3>
-    </header>
+        <header class="container-fluid text-center">
+            <h4>Your Local Weather</h4>
+        </header>
 
-    <div class="container text-center">
-        <h1 id="my-city"></h1>
-        <p><i id="my-weather-icon" class="wi wi-day-sunny"></i></p>
-        <p id="my-weather-description"></p>
-        <h1 id="my-temp"></h1>
+        <div class="container text-center">
 
-        <br/>
-        <p><i id="my-wind-icon" class="wi wi-wind"></i></p>
-        <p id="my-wind-description"></p>
+            <h1 id="my-city"></h1>
+            <p><i id="my-weather-icon" class="wi wi-day-sunny"></i></p>
+            <p id="my-weather-description"></p>
 
-        <br/>
-        <div class="btn-group" role="group" aria-label="...">
-            <button id="refresh" class="btn btn-success" role="button">
-                <i class="fa fa-2x fa-refresh"></i>
-            </button>
+            <h1 id="my-temp"></h1>
+            <p><i id="my-wind-icon" class="wi wi-wind"></i></p>
+            <p id="my-wind-description"></p>
 
-            <button id="my-button" class="btn btn-info">
-                °F&nbsp; <i id="my-toggle" class="fa fa-2x fa-toggle-on"></i> &nbsp;°C
-            </button>
+            <div class="btn-group" role="group" aria-label="...">
+                <p id="my-button" class="">
+                    <i class="wi wi-fahrenheit"></i> <i id="my-toggle" class="fa fa-toggle-on"></i> <i class="wi wi-celsius"></i>
+                    <!-- °F&nbsp; <i id="my-toggle" class="fa fa-2x fa-toggle-on"></i> &nbsp;°C -->
+                </p>
 
+                <p id="refresh" class="">
+                    <i class="fa fa-2x fa-refresh"></i>
+                </p>
+            </div>
         </div>
-    </div>
 
-    <div class="container text-center">
-        <br/>
-        <p id="my-status"></p>
-    </div>
+        <div class="container text-center" id="my-status">
+        </div>
 
-    <footer class="footer text-center">
-        <p class="text-muted">
-            Inspired by
-            <a href="http://codepen.io/artur_sep/full/LNRxVP/" target="_blank">
-                artur<strong>sęp</strong>
-                <script>document.write(new Date().getFullYear());</script>
+        <footer class="footer text-center">
+            <p class="text-muted">
+                Inspired by
+                <a href="http://codepen.io/artur_sep/full/LNRxVP/" target="_blank">
+                artur<strong>sęp</strong> 2016
             </a>
-        </p>
-    </footer>
-</div>
+            </p>
+        </footer>
+    </div>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
-</html>
 
+</html>
